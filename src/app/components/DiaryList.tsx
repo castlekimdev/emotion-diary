@@ -90,7 +90,7 @@ const DiaryList = ({ diaryList }) => {
       {processedDiaryList.length > 0 ? (
         processedDiaryList.map((it) => <DiaryItem key={it.id} {...it} />)
       ) : (
-        <p className="empty_text">새로운 일기를 작성해보세요.</p>
+        <p className="empty_text">작성된 일기가 없어요.</p>
       )}
     </div>
   );

@@ -1,38 +1,12 @@
 "use client";
 
 import { ReactNode, useReducer, useRef, createContext } from "react";
+import { mockData } from "@/app/util/mock";
 
 // @ts-ignore
 export const DiaryDispatchContext = createContext();
 // @ts-ignore
 export const DiaryStateContext = createContext();
-
-const mockData = [
-  {
-    id: 1,
-    createdDate: new Date().getTime(),
-    emotionId: 1,
-    content: "1번 일기 내용",
-  },
-  {
-    id: 2,
-    createdDate: new Date().getTime(),
-    emotionId: 2,
-    content: "2번 일기 내용",
-  },
-  {
-    id: 3,
-    createdDate: new Date().getTime(),
-    emotionId: 3,
-    content: "3번 일기 내용",
-  },
-  {
-    id: 4,
-    createdDate: new Date().getTime(),
-    emotionId: 4,
-    content: "4번 일기 내용",
-  },
-];
 
 const reducer = (state, action) => {
   let newState = [];
