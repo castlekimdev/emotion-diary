@@ -21,8 +21,11 @@ const Diary = () => {
   }, []);
 
   useEffect(() => {
+    // @ts-ignore
     if (diaryList.length >= 1) {
+      // @ts-ignore
       const targetDiary = diaryList.find(
+        // @ts-ignore
         (it) => parseInt(it.id) === parseInt(id),
       );
 
@@ -41,12 +44,14 @@ const Diary = () => {
     return <div className="DiaryPage">로딩중입니다.</div>;
   } else {
     const curEmotionData = emotionList.find(
+      // @ts-ignore
       (it) => parseInt(it.emotion_id) === parseInt(data.emotion),
     );
 
     return (
       <div className="DiaryPage">
         <Header
+          // @ts-ignore
           headText={`${getStringDate(new Date(data.date))} 기록`}
           leftChild={
             <Button text={"< 뒤로가기"} onClick={() => router.back()} />
@@ -54,6 +59,7 @@ const Diary = () => {
           rightChild={
             <Button
               text={"수정하기"}
+              // @ts-ignore
               onClick={() => router.push(`/edit/${data.id}`)}
             />
           }
@@ -64,19 +70,34 @@ const Diary = () => {
             <div
               className={[
                 "diary_img_wrapper",
+                // @ts-ignore
                 `diary_img_wrapper_${data.emotion}`,
               ].join(" ")}
             >
-              <img src={curEmotionData.emotion_img} alt="emotion" />
+              <img
+                src={
+                  // @ts-ignore
+                  curEmotionData.emotion_img
+                }
+                alt="emotion"
+              />
               <div className="emotion_descript">
-                {curEmotionData.emotion_descript}
+                {
+                  // @ts-ignore
+                  curEmotionData.emotion_descript
+                }
               </div>
             </div>
           </section>
           <section>
             <h4>오늘의 일기</h4>
             <div className="diary_content_wrapper">
-              <p>{data.content}</p>
+              <p>
+                {
+                  // @ts-ignore
+                  data.content
+                }
+              </p>
             </div>
           </section>
         </article>

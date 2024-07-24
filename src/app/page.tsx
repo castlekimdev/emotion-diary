@@ -19,6 +19,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    // @ts-ignore
     if (diaryList.length >= 1) {
       const firstDay = new Date(
         curDate.getFullYear(),
@@ -36,6 +37,7 @@ export default function Home() {
       ).getTime();
 
       setData(
+        // @ts-ignore
         diaryList.filter((it) => firstDay <= it.date && it.date <= lastDay),
       );
     } else {

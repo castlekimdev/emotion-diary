@@ -67,6 +67,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
 
   // @ts-ignore
   // @ts-ignore
+  // @ts-ignore
   return (
     <div className="DiaryEditor">
       <Header
@@ -119,6 +120,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
           <div className="input_box text_wrapper">
             <textarea
               placeholder="오늘은 어땠나요"
+              // @ts-ignore
               ref={contentRef}
               value={content}
               onChange={(e) => setContent(e.target.value)}

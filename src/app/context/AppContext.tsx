@@ -41,6 +41,7 @@ const reducer = (state, action) => {
       return action.data;
     }
     case "CREATE": {
+      // @ts-ignore
       newState = [action.data, ...state];
       break;
     }
