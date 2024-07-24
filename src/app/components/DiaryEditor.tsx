@@ -31,6 +31,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
 
   const handleSubmit = () => {
     if (content.length < 1) {
+      // @ts-ignore
       contentRef.current.focus();
       return;
     }
