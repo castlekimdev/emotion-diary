@@ -20,8 +20,11 @@ const Edit = () => {
 
   // id, diaryList가 변할때 데이터꺼내오기
   useEffect(() => {
+    // @ts-ignore
     if (diaryList.length >= 1) {
+      // @ts-ignore
       const targetDiary = diaryList.find(
+        // @ts-ignore
         (it) => parseInt(it.id) === parseInt(id),
       );
       if (targetDiary) {
