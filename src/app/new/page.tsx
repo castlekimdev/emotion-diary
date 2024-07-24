@@ -11,7 +11,10 @@ const New = () => {
 
   return (
     <div>
-      <DiaryEditor />
+      {
+        // @ts-ignore
+        <DiaryEditor />
+      }
     </div>
   );
 };
